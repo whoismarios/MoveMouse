@@ -12,6 +12,7 @@ try:
         pyautogui.moveRel(0, square_size, duration=delay)  # move down
         pyautogui.moveRel(-square_size, 0, duration=delay) # move left
         pyautogui.moveRel(0, -square_size, duration=delay) # move up
+        pyautogui.click()
 
         # short break to not overload the script
         time.sleep(delay)
