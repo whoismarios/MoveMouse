@@ -1,5 +1,6 @@
 import pyautogui
 import time
+import keyboard
 
 # define the delay between movements and the size of the square
 delay = 1  # seconds
@@ -17,5 +18,10 @@ try:
         # short break to not overload the script
         time.sleep(delay)
 
+        # check if ESC key is pressed to stop the script
+        if keyboard.is_pressed('esc'):
+            print("Program stopped by user")
+            break
+
 except KeyboardInterrupt:
-    print("Program stopped by user")
+    print("Program stopped by user in command line")
